@@ -20,3 +20,11 @@ def program_manager():
         program_manager_command = input("Program Manager > ")
         if program_manager_command == "about":
             messagebox.showinfo("Program Manager For Project Professional", "This Is A Program Manager For Project Professional" "\n VERSION: MAY 13TH BETA")
+
+
+if __name__ == "__main__":
+    if check_python_version():
+        program_manager()
+    else:
+        print("Please Use Python 3.14")
+        sys.exit(1)
