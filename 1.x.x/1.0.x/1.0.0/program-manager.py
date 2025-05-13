@@ -1,10 +1,10 @@
 # This is a program manager for Project Professional.
 # It Is A CLI But When Type In a command It Will Open A GUI
 
-# This Fuction Is For Checkign The Python Version
+# This Function Is For Checking The Python Version
 
 import sys
-import os
+from tkinter import messagebox
 
 def check_python_version():
     if sys.version_info.major == 3 and sys.version_info.minor == 14:
@@ -14,3 +14,9 @@ def check_python_version():
         print("This Python Version Is Not Good")
         print("Please Use Python 3.14")
         return False
+
+def program_manager():
+    while True:
+        program_manager_command = input("Program Manager > ")
+        if program_manager_command == "about":
+            messagebox.showinfo("Program Manager For Project Professional", "This Is A Program Manager For Project Professional" "\n VERSION: MAY 13TH BETA")
